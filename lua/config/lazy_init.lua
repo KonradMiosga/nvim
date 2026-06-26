@@ -7,6 +7,7 @@ if not vim.loop.fs_stat(lazypath) then
     "https://github.com/folke/lazy.nvim.git",
     "--branch=stable", -- latest stable release
     lazypath,
+    -- test
   })
 end
 vim.opt.rtp:prepend(lazypath)
