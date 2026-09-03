@@ -52,6 +52,10 @@ return {
 		vim.lsp.config["clangd"] = clangd_config
 		vim.lsp.enable("clangd")
 
+		vim.lsp.enable("nil_ls")
+
+        vim.lsp.enable("ols")
+
 		vim.diagnostic.config({
 			virtual_text = {
 				spacing = 4,
@@ -70,5 +74,9 @@ return {
 				prefix = "",
 			},
 		})
+
+		vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { desc = "Go to definition" })
+		vim.keymap.set("n", "<leader>gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
+		vim.keymap.set("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Open diagnostics float" })
 	end,
 }

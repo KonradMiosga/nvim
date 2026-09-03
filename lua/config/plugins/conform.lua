@@ -8,6 +8,8 @@ return {
 				cpp = { "clang_format" },
 				objc = { "clang_format" },
 				objcpp = { "clang_format" },
+				nix = { "nixfmt" },
+				odin = { "odinfmt" },
 			},
 			lsp_format = { "fallback" },
 		})
